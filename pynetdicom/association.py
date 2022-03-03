@@ -2007,7 +2007,7 @@ class Association(threading.Thread):
                         LOGGER.error("Failed to decode the received Identifier dataset")
                         LOGGER.exception(exc)
                         yield status, None
-
+                LOGGER.info("DOSTAL SOM SA SEM (DIVNY YEALD) " + str(operation_no))
                 yield status, identifier
                 continue
 
@@ -2015,6 +2015,7 @@ class Association(threading.Thread):
             #   or Cancel
             self._reactor_checkpoint.set()
             yield status, identifier
+            LOGGER.info("DOSTAL SOM SA SEM " + str(operation_no))
             break
 
         # Unpause the reactor
