@@ -12,7 +12,7 @@ with open(BASE_DIR / "README.rst", "r") as f:
     long_description = f.read()
 
 setup(
-    name="pynetdicom",
+    name="pynetdicomMODIFIED",
     packages=find_packages(),
     include_package_data=True,
     version=__version__,
